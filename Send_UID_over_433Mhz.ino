@@ -46,6 +46,7 @@ void loop(void) {
  
  if (success){
    Serial.print("Tag found: ");
+   keyDuino.buzz(100);
    readID = keyDuino.convertUintToString(uid, uidLength);
    readID.toCharArray(UidArray, sizeof(UidArray) + 1 ); //UID als char Array
    
